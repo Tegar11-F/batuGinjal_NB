@@ -1,0 +1,23 @@
+<div class="login">
+  <h1>Flower Class Prediction</h1>
+
+  <!-- Main Input For Receiving Query to our ML -->
+  <form action="{{ url_for('predict')}}" method="post">
+    <input type="text" name="kpr_aktif_TIDAK" placeholder="kpr_aktif_TIDAK" required="required" />
+    <input type="text" name="kpr_aktif_YA" placeholder="kpr_aktif_YA" required="required" />
+    <input type="text" name="rata1" placeholder="rata1" required="required" />
+    <input type="text" name="rata2" placeholder="rata2" required="required" />
+    <input type="text" name="rata3" placeholder="rata3" required="required" />
+    <input type="text" name="rata4" placeholder="rata4" required="required" />
+    <input type="text" name="rata5" placeholder="rata5" required="required" />
+    <input type="text" name="pendapatan_setahun_juta" placeholder="pendapatan_setahun_juta" required="required" />
+    <input type="text" name="durasi_pinjaman_bulan" placeholder="durasi_pinjaman_bulan" required="required" />
+    <input type="text" name="jumlah_tanggungan" placeholder="jumlah_tanggungan" required="required" />
+
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+  </form>
+
+  <br />
+  <br />
+  {{ prediction_text }}
+</div>
